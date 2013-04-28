@@ -15,32 +15,36 @@ Bundle 'groenewege/vim-less'
 Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'vim-scripts/colorschemer'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'evidens/vim-twig'
+
 
 filetype plugin indent on     " required!
 
+" Anzeige
+set t_Co=256 "/ add 'export TERM="xterm-256color"' in $HOME/.bashrc
+syntax on
 set number " Zeilennummer
-set bg=dark
+colorscheme jellybeans
+
+" Encoding
+set encoding=utf-8
+
+" Format
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set ignorecase
-set hlsearch
-
-set encoding=utf-8
-" display filename
 set modeline
 set ls=2
 
+" Search
+set hlsearch
+set ignorecase
+
+" Automatisches einrücken
 filetype indent on
-
-set t_Co=256
-" let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-
-syntax on
-"set background=dark
-colorscheme jellybeans
-
+set autoindent
 
 " Shortcuts
 map <C-n> :NERDTreeToggle<CR>
