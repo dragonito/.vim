@@ -12,9 +12,9 @@ Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
 Bundle 'groenewege/vim-less'
-Bundle 'skammer/vim-css-color'
+Bundle 'nanotech/jellybeans.vim'
+"Bundle 'skammer/vim-css-color' <- performance problem
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'vim-scripts/colorschemer'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'evidens/vim-twig'
 
