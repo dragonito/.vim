@@ -22,7 +22,7 @@ Bundle 'evidens/vim-twig'
 filetype plugin indent on     " required!
 
 " Anzeige
-set t_Co=256 "/ add 'export TERM="xterm-256color"' in $HOME/.bashrc
+set t_Co=256
 syntax on
 set number " Zeilennummer
 colorscheme jellybeans
