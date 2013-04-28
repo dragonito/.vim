@@ -17,6 +17,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'evidens/vim-twig'
+Bundle 'plasticboy/vim-markdown'
 
 
 filetype plugin indent on     " required!
@@ -48,3 +49,6 @@ set autoindent
 
 " Shortcuts
 map <C-n> :NERDTreeToggle<CR>
+
+" Vim-Markdown config
+let g:vim_markdown_folding_disabled=1
