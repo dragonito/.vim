@@ -13,7 +13,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'nanotech/jellybeans.vim'
-"Bundle 'skammer/vim-css-color' <- performance problem
+Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'evidens/vim-twig'
