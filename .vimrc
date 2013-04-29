@@ -18,7 +18,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'evidens/vim-twig'
 Bundle 'plasticboy/vim-markdown'
-
+Bundle 'Chiel92/vim-autoformat'
 
 filetype plugin indent on     " required!
 
@@ -47,8 +47,11 @@ set ignorecase
 filetype indent on
 set autoindent
 
-" Shortcuts
-map <C-n> :NERDTreeToggle<CR>
 
 " Vim-Markdown config
 let g:vim_markdown_folding_disabled=1
+
+
+" Shortcuts
+map <C-n> :NERDTreeToggle<CR>
+noremap <F3> :Autoformat<CR><CR>
