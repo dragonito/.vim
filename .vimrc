@@ -7,8 +7,6 @@ call vundle#rc()
 
 " Bundles
 Bundle 'gmarik/vundle'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
 Bundle 'groenewege/vim-less'
@@ -19,6 +17,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'evidens/vim-twig'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Chiel92/vim-autoformat'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required!
 
@@ -47,11 +46,26 @@ set ignorecase
 filetype indent on
 set autoindent
 
+" file autocomplete
+set wildmenu
+set wildmode=list:longest
+set wildignore+=*/app/main/cache/*,*/app/cache/*,*/vendor/**/tests/*
 
 " Vim-Markdown config
 let g:vim_markdown_folding_disabled=1
 
+" ctrlp config
+let g:ctrlp_working_path_mode = ''
+
 
 " Shortcuts
+let mapleader = ","
+let maplocalleader = ","
+
 map <C-n> :NERDTreeToggle<CR>
+
 noremap <F3> :Autoformat<CR><CR>
+
+nnoremap <leader>f :CtrlP<CR>
+nmap <leader>fw :CtrlP<CR><C-\>w
+vmap <leader>fw y:CtrlP<CR><C-\>c
