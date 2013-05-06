@@ -19,6 +19,13 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'kien/ctrlp.vim'
 
+" Snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+
+
 filetype plugin indent on     " required!
 
 " Anzeige
