@@ -18,6 +18,7 @@ Bundle 'evidens/vim-twig'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
