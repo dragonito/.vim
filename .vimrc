@@ -29,6 +29,10 @@ Bundle 'garbas/vim-snipmate'
 
 filetype plugin indent on     " required!
 
+" include
+source ~/.vim/scripts/PhpNamespace.vim
+
+
 " Anzeige
 set t_Co=256
 syntax on
@@ -64,7 +68,6 @@ let g:vim_markdown_folding_disabled=1
 
 " ctrlp config
 let g:ctrlp_working_path_mode = ''
-
 
 " Shortcuts
 let mapleader = ","

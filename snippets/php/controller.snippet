@@ -1,0 +1,25 @@
+<?php
+
+${1:`PhpNamespace()`}
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+/**
+ *
+ * @author David Badura <d.a.badura@gmail.com>
+ */
+class ${2:`Filename('', 'FooBar')`} extends Controller
+{
+
+	/**
+	 * @Route("/${3}", name="${4}")
+	 * @Template
+	 */
+	public function indexAction()
+	{
+		return array();
+	}
+
+}

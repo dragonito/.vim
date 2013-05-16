@@ -1,0 +1,38 @@
+<?php
+
+${1:`PhpNamespace()`}
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+/**
+ *
+ * @author David Badura <d.a.badura@gmail.com>
+ */
+class ${2:`Filename('', 'FooBarType')`} extends AbstractType
+{
+
+	public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+	    $builder->add('${3:name}');
+	}
+
+	public function setDefaultOptions(OptionsResolverInterface $resolver)
+	{
+		$resolver->setDefaults(array(
+			'data_class' => '${4:Entity}'
+		));
+	}
+
+	public function getName()
+	{
+		return '${5:`Filename('', 'FooBar')`}';
+	}
+
+	public function getParent()
+	{
+		return ${6:false};
+	}
+
+}
