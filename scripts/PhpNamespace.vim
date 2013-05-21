@@ -4,9 +4,21 @@ function PhpNamespace()
     let file = expand("%:p")
 
     if match(file, pattern) != -1
-       return "namespace " . substitute(substitute(substitute(file, pattern, '\2', ''), '\/', '\\\', 'g'), '^\\\', '', '') . ";"
+       return substitute(substitute(substitute(file, pattern, '\2', ''), '\/', '\\\', 'g'), '^\\\', '', '')
     endif
 
     return ""
+
+endfunction
+
+function PhpNamespaceStatment()
+
+    let namespace = PhpNamespace()
+
+    if namespace == ""
+        return ""
+    endif
+
+    return "namespace " . namespace . ";"
 
 endfunction

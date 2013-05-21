@@ -1,6 +1,6 @@
 <?php
 
-${1:`PhpNamespace()`}
+${1:`PhpNamespaceStatment()`}
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,7 +21,7 @@ class ${2:`Filename('', 'FooBarType')`} extends AbstractType
 	public function setDefaultOptions(OptionsResolverInterface $resolver)
 	{
 		$resolver->setDefaults(array(
-			'data_class' => '${4:Entity}'
+			'data_class' => '`PhpNamespace()`\${4:Entity}'
 		));
 	}
 

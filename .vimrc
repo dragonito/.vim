@@ -19,6 +19,10 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'scrooloose/syntastic'
+Bundle 'stephpy/vim-php-cs-fixer'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'Lokaltog/vim-powerline'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -31,7 +35,7 @@ filetype plugin indent on     " required!
 
 " include
 source ~/.vim/scripts/PhpNamespace.vim
-
+source ~/.vim/scripts/Symfony2.vim
 
 " Anzeige
 set t_Co=256
@@ -67,7 +71,17 @@ set wildignore+=*/app/main/cache/*,*/app/cache/*,*/vendor/**/tests/*
 let g:vim_markdown_folding_disabled=1
 
 " ctrlp config
-let g:ctrlp_working_path_mode = ''
+let g:ctrlp_workng_path_mode = ''
+
+" php-cs-fixe plugin
+let g:php_cs_fixer_path = "php-cs-fixer" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_level = ""                " which level ?
+let g:php_cs_fixer_config = ""           " configuration
+let g:php_cs_fixer_php_path = "php"             " Path to PHP
+let g:php_cs_fixer_fixers_list = "linefeed,indentation,trailing_spaces,unused_use,php_closing_tag,return,visibility,braces,phpdoc_params,eof_ending,extra_empty_lines,controls_spaces,elseif"             " List of fixers
+let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
 
 " Shortcuts
 let mapleader = ","
