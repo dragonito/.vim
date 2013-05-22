@@ -11,7 +11,7 @@ function PhpNamespace()
 
 endfunction
 
-function PhpNamespaceStatment()
+function PhpNamespaceStatement()
 
     let namespace = PhpNamespace()
 
