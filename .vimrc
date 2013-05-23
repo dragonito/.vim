@@ -24,6 +24,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'ervandew/supertab'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -76,8 +77,8 @@ let g:ctrlp_workng_path_mode = ''
 
 " php-cs-fixe plugin
 let g:php_cs_fixer_path = "php-cs-fixer" " define the path to the php-cs-fixer.phar
-let g:php_cs_fixer_level = ""                " which level ?
-let g:php_cs_fixer_config = ""           " configuration
+let g:php_cs_fixer_level = "all"                " which level ?
+let g:php_cs_fixer_config = "default"           " configuration
 let g:php_cs_fixer_php_path = "php"             " Path to PHP
 let g:php_cs_fixer_fixers_list = "linefeed,indentation,trailing_spaces,unused_use,php_closing_tag,return,visibility,braces,phpdoc_params,eof_ending,extra_empty_lines,controls_spaces,elseif"             " List of fixers
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
