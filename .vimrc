@@ -1,4 +1,5 @@
 set nocompatible               " be iMproved
+set nopaste                    " paste mode deaktivieren
 filetype off                   " required!
 
 " Init Vundle
