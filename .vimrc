@@ -96,3 +96,6 @@ noremap <F3> :Autoformat<CR><CR>
 nnoremap <leader>f :CtrlP<CR>
 nmap <leader>fw :CtrlP<CR><C-\>w
 vmap <leader>fw y:CtrlP<CR><C-\>c
+
+nnoremap <leader>t :tabe<CR>
+nnoremap <leader>n :tabnext<CR>
