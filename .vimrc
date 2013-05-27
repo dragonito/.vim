@@ -67,7 +67,7 @@ set autoindent
 " file autocomplete
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*/app/main/cache/*,*/app/cache/*,*/vendor/**/tests/*
+set wildignore+=*/cache/*,*/vendor/**/tests/*
 
 " Vim-Markdown config
 let g:vim_markdown_folding_disabled=1
