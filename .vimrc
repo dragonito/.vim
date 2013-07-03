@@ -90,7 +90,7 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 let mapleader = ","
 let maplocalleader = ","
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
 
 noremap <F3> :Autoformat<CR><CR>
 
