@@ -1,6 +1,6 @@
 <?php
 
-${1:`PhpNamespaceStatement()`}
+`PhpNamespaceStatement()`
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,14 +12,14 @@ use Symfony\Component\Console\Output\OutputInterface;
  *
  * @author David Badura <d.a.badura@gmail.com>
  */
-class ${2:`Filename('', 'FooBar')`} extends Command
+class `Filename('', 'FooBar')` extends Command
 {
 
 	protected function configure()
 	{
 		$this
-			->setName('${3:name}')
-			->setDescription('${4:desciption}')
+			->setName('${1:name}')
+			->setDescription('${2:desciption}')
 			->addArgument(
 					'name',
 					InputArgument::OPTIONAL,
