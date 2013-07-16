@@ -25,7 +25,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'ervandew/supertab'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
