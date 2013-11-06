@@ -25,6 +25,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/taglist.vim'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -72,8 +73,33 @@ set wildignore+=*/cache/*,*/vendor/**/tests/*
 " Vim-Markdown config
 let g:vim_markdown_folding_disabled=1
 
+" Create directory on save if it does not exist
+" http://stackoverflow.com/questions/4292733/vim-creating-parent-directories-on-save
+augroup BWCCreateDir
+    au!
+    autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
+augroup END
+
 " ctrlp config
-let g:ctrlp_workng_path_mode = ''
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_abbrev = {
+    \ 'gmode': 'i',
+    \ 'abbrevs': [
+        \ {
+            \ 'pattern': '_',
+            \ 'expanded': ''
+        \ },
+        \ {
+            \ 'pattern': '\\',
+            \ 'expanded': ''
+        \ },
+        \ {
+            \ 'pattern': ';',
+            \ 'expanded': ''
+        \ }
+    \ ]
+\ }
+
 
 " php-cs-fixe plugin
 let g:php_cs_fixer_path = "php-cs-fixer" " define the path to the php-cs-fixer.phar
@@ -90,12 +116,13 @@ let mapleader = ","
 let maplocalleader = ","
 
 map <C-n> :NERDTreeTabsToggle<CR>
+map <Leader>t :TlistToggle<CR>
 
 noremap <F3> :Autoformat<CR><CR>
 
 nnoremap <leader>f :CtrlP<CR>
 nmap <leader>fw :CtrlP<CR><C-\>w
+vmap <leader>fW yW:CtrlP<CR><C-\>c
 vmap <leader>fw y:CtrlP<CR><C-\>c
 
 nnoremap <leader>t :tabe<CR>
-nnoremap <leader>n :tabnext<CR>
