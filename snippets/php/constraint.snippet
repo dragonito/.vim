@@ -1,0 +1,23 @@
+<?php
+
+`PhpNamespaceStatement()`
+
+use Symfony\Component\Validator\Constraint;
+
+/**
+ *
+ * @author David Badura <d.a.badura@gmail.com>
+ * 
+ * @Annotation
+ */
+class `Filename('', 'FooBarType')` extends Constraint
+{
+
+	public $message = 'The string "%string%" is not valid';
+
+	public function getTargets()
+	{
+		return self::CLASS_CONSTRAINT;
+	}
+
+}
