@@ -10,7 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'ap/vim-css-color'
@@ -116,7 +116,7 @@ let mapleader = ","
 let maplocalleader = ","
 
 map <C-n> :NERDTreeTabsToggle<CR>
-map <Leader>t :TlistToggle<CR>
+map <C-m> :TlistToggle<CR>
 
 noremap <F3> :Autoformat<CR><CR>
 
