@@ -1,5 +1,7 @@
 #!/bin/bash
 rm -Rf bundle
-ln -s .vimrc ../.vimrc
+cd ..
+ln -s .vim/.vimrc .vimrc
+cd .vim
 git clone https://github.com/gmarik/vundle.git bundle/vundle
 vim +BundleInstall +qall
