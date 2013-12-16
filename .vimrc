@@ -26,6 +26,9 @@ Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'docteurklein/vim-symfony'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -69,6 +72,27 @@ set autoindent
 set wildmenu
 set wildmode=list:longest
 set wildignore+=*/cache/*,*/vendor/**/tests/*
+
+
+" OmniCppComplete (strg+x then strg+o)
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" " automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
+
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
 
 " Vim-Markdown config
 let g:vim_markdown_folding_disabled=1
