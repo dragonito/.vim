@@ -1,21 +1,48 @@
-snippet inc
-	{% include '${1}' %}
+snippet autoescape
+	{% autoescape ${1} %}
+		${2}
+	{% endautoescape %}
 
-snippet ext
-	{% extends '${1:template.html.twig}' %}
+snippet include
+	{% include '${1:template}' %}
 
 snippet extends
-	{% extends '${1:template}' %}${2}
+	{% extends '${1:template}' %}
 
 snippet embed
 	{% embed '${1:template}' %}
 		${2}
 	{% endembed %}
 
+snippet macro
+	{% macro ${1:name}(${2:params}) %}
+		${3}
+	{% endmacro %}
+
+snippet import
+	{% import '${1:template}' as ${2:name} %}
+
+snippet self
+	{% import _self as ${1:_} %}
+
 snippet filter
 	{% filter ${1:filterName} %}
 		${2}
 	{% endfilter %}
+
+snippet do
+	{% do ${1} %}
+
+snippet flush
+	{% flush %}
+
+snippet use
+	{% use ${1:template} %}
+
+snippet spaceless
+	{% spaceless %}
+		${1}
+	{% endspaceless %}
 
 snippet if
 	{% if ${1} %}
@@ -37,6 +64,9 @@ snippet for
 
 snippet set
 	{% set ${1:var} = ${2:value} %}${3}
+
+snippet {{
+	{{ ${1} }}${2}
 
 snippet }}
 	{{ ${1} }}${2}
