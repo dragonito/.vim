@@ -27,8 +27,9 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'docteurklein/vim-symfony'
+Bundle 'shawncplus/phpcomplete.vim' 
+Bundle 'docteurklein/vim-symfony' 
+Bundle 'junegunn/vim-easy-align' 
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -126,7 +127,7 @@ let g:ctrlp_abbrev = {
 
 
 " php-cs-fixe plugin
-let g:php_cs_fixer_path = "php-cs-fixer" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
 let g:php_cs_fixer_level = "all"                " which level ?
 let g:php_cs_fixer_config = "default"           " configuration
 let g:php_cs_fixer_php_path = "php"             " Path to PHP
@@ -150,3 +151,10 @@ vmap <leader>fW yW:CtrlP<CR><C-\>c
 vmap <leader>fw y:CtrlP<CR><C-\>c
 
 nnoremap <leader>t :tabe<CR>
+
+
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
