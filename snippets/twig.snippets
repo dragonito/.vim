@@ -4,7 +4,6 @@ snippet autoescape
 	{% endautoescape %}
 snippet include
 	{% include '${1:template}' %}
-
 snippet extends
 	{% extends '${1:template}' %}
 snippet embed
@@ -43,6 +42,8 @@ snippet elseif
 snippet else
 	{% else %}
 		${1}
+snippet endif
+	{% endif %}
 snippet for
 	{% for ${2:} in ${1} %}
 		{{ $2 }}
@@ -61,9 +62,15 @@ snippet %end
 	{% ${1:block} %}${2}{% end$1 %}
 snippet block
 	{% block ${1:name} %}${2}{% endblock %}
-snippet f_date
-	{{ ${1:a_date}|date("${2:m/d/Y}") }}
+snippet date
+	{{ ${1:date}|date("${2:d.m.Y}") }}
+snippet time
+	{{ ${1:date}|date("${2:H:i:s}") }}
+snippet datetime
+	{{ ${1:date}|date("${2:H:i:s d.m.Y}") }}
 snippet dump
 	{{ dump(${1:varName}) }}
 snippet parent
 	{{ parent() }}
+snippet default
+	{{ ${1:var}|default(${2:false}) }}

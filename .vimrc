@@ -30,6 +30,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'shawncplus/phpcomplete.vim' 
 Bundle 'docteurklein/vim-symfony' 
 Bundle 'junegunn/vim-easy-align' 
+Bundle 'kshenoy/vim-signature'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -140,6 +141,8 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 let mapleader = ","
 let maplocalleader = ","
 
+let g:user_emmet_expandabbr_key = '<c-h>'
+
 map <C-n> :NERDTreeTabsToggle<CR>
 map <C-m> :TlistToggle<CR>
 
@@ -158,3 +161,6 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
+
+
+nmap <leader>s :execute ":!"g:symfony_enable_shell_cmd<CR>
