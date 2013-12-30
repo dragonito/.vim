@@ -28,9 +28,9 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'shawncplus/phpcomplete.vim' 
-Bundle 'docteurklein/vim-symfony' 
-Bundle 'junegunn/vim-easy-align' 
+Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'docteurklein/vim-symfony'
+Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/delimitMate.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/xml.vim'
@@ -132,6 +132,11 @@ let g:ctrlp_abbrev = {
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#branch#enabled = 1
+let g:airline_left_sep= ' '
+let g:airline_right_sep=' '
 
 " php-cs-fixe plugin
 " let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
@@ -146,6 +151,9 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 
 " syntastic
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+
+" remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Shortcuts
 let mapleader = ","
