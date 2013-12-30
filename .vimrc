@@ -25,7 +25,7 @@ Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'shawncplus/phpcomplete.vim' 
@@ -129,6 +129,9 @@ let g:ctrlp_abbrev = {
     \ ]
 \ }
 
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
 
 " php-cs-fixe plugin
 " let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
