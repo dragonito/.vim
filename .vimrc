@@ -15,7 +15,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
-" Bundle 'airblade/vim-gitgutter'
 Bundle 'mhinz/vim-signify'
 Bundle 'evidens/vim-twig'
 Bundle 'plasticboy/vim-markdown'
@@ -24,24 +23,26 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'docteurklein/vim-symfony'
 Bundle 'junegunn/vim-easy-align'
-Bundle 'vim-scripts/delimitMate.vim'
+Bundle 'Raimondi/delimitMate.vim'
 Bundle 'gregsexton/MatchTag'
-Bundle 'othree/xml.vim'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
+
+" Experiment
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'docteurklein/vim-symfony'
+Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'scrooloose/nerdcommenter'
 
 
 filetype plugin indent on     " required!
@@ -150,12 +151,18 @@ let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default 
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
 
+" tags
+set tags+=./tags.vendors,tags.vendors
 
 " syntastic
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Nerdtree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['^\.git$', '^\.svn$']
 
 " Shortcuts
 let mapleader = ","
@@ -182,5 +189,8 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
 
-
-nmap <leader>s :execute ":!"g:symfony_enable_shell_cmd<CR>
+" php-namespace
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
