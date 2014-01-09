@@ -162,7 +162,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Nerdtree
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['^\.git$', '^\.svn$']
+let NERDTreeIgnore = ['^\.git$', '^\.svn$', '\.swp$']
 
 " Shortcuts
 let mapleader = ","
