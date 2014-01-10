@@ -31,6 +31,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'Raimondi/delimitMate.vim'
 Bundle 'gregsexton/MatchTag'
+Bundle 'pangloss/vim-javascript'
 
 " Snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -155,7 +156,8 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 set tags+=./tags.vendors,tags.vendors
 
 " syntastic
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args="--standard=PSR2 --report=csv --warning-severity=6"
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
