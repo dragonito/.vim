@@ -1,0 +1,29 @@
+snippet controller
+	<?php
+
+	`PhpNamespaceStatement()`
+
+	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+	use Symfony\Component\HttpFoundation\Request;
+
+	/**
+	 *
+	 * @author `g:snips_author`
+	 */
+	class `Filename('', 'FooBarController')` extends Controller
+	{
+		${1}
+	}
+snippet controller_action
+	/**
+	 * @Route("/${2:path}", name="${3:name}")
+	 * @Template
+	 */
+	public function ${1:index}Action(Request $request)
+	{
+		${4}
+
+		return array();
+	}

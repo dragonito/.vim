@@ -1,0 +1,44 @@
+snippet command
+	<?php
+
+	`PhpNamespaceStatement()`
+
+	use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+	use Symfony\Component\Console\Input\InputArgument;
+	use Symfony\Component\Console\Input\InputInterface;
+	use Symfony\Component\Console\Input\InputOption;
+	use Symfony\Component\Console\Output\OutputInterface;
+
+	/**
+	 *
+	 * @author `g:snips_author`
+	 */
+	class `Filename('', 'FooBar')` extends Command
+	{
+
+		/**
+		 *
+		 */
+		protected function configure()
+		{
+			$this
+				->setName('${1:name}')
+				->setDescription('${2:desciption}')
+			;
+		}
+
+		/**
+		 *
+		 * @param InputInterface $input
+		 * @param OutputInterface $output
+		 */
+		protected function execute(InputInterface $input, OutputInterface $output)
+		{
+			${3}
+		}
+
+	}
+snippet command_argument
+	->addArgument('${1:name}', ${2:InputArgument::OPTIONAL}, '${3:description?}')
+snippet command_option
+	->addOption('${1:name}', '${2:short}'', ${3:InputOption::VALUE_NONE}, '${4:description}')

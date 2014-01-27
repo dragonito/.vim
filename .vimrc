@@ -52,6 +52,9 @@ filetype plugin indent on     " required!
 source ~/.vim/scripts/PhpNamespace.vim
 source ~/.vim/scripts/Symfony2.vim
 
+" Snippets
+let g:snips_author='David Badura <d.a.badura@gmail.com>'
+
 " Anzeige
 set t_Co=256
 syntax on
