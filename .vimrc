@@ -44,6 +44,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'chrisbra/csv.vim'
 
 
 filetype plugin indent on     " required!
