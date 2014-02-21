@@ -1,0 +1,33 @@
+<?php
+
+`PhpNamespaceStatement()`
+
+use Doctrine\ORM\Events;
+use Doctrine\Common\EventSubscriber;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+
+/**
+ *
+ * @author David Badura <d.a.badura@gmail.com>
+ */
+class `Filename('', 'FooBarListener')` implements EventSubscriber
+{
+
+    public function getSubscribedEvents()
+    {
+        return array(
+            Events::postUpdate,
+        );
+    }
+
+    public function preUpdate(LifecycleEventArgs $args)
+    {
+        $entity = $args->getObject();
+        $entityManager = $args->getObjectManager();
+
+        // perhaps you only want to act on some "Product" entity
+        if ($entity instanceof Product) {
+            // do something with the Product
+        }
+    }
+}

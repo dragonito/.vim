@@ -14,7 +14,7 @@ class `Filename('', 'FooBarType')` extends AbstractType
 {
 
 	public function buildForm(FormBuilderInterface $builder, array $options)
-    {
+	{
 	    $builder->add('${1:name}');
 	}
 
@@ -32,7 +32,6 @@ class `Filename('', 'FooBarType')` extends AbstractType
 
 	public function getParent()
 	{
-		return ${4:null};
+		return 'form';
 	}
-
 }

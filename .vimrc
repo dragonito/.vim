@@ -23,14 +23,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'scrooloose/syntastic'
-Bundle 'tsaleh/vim-matchit'
+" Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'Raimondi/delimitMate.vim'
-Bundle 'gregsexton/MatchTag'
+" Bundle 'gregsexton/MatchTag'
 Bundle 'pangloss/vim-javascript'
 
 " Snippets
@@ -40,10 +40,10 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 
 " Experiment
-Bundle 'arnaud-lb/vim-php-namespace'
-Bundle 'docteurklein/vim-symfony'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'scrooloose/nerdcommenter'
+" Bundle 'arnaud-lb/vim-php-namespace'
+" Bundle 'docteurklein/vim-symfony'
+" Bundle 'shawncplus/phpcomplete.vim'
+" Bundle 'scrooloose/nerdcommenter'
 Bundle 'chrisbra/csv.vim'
 
 

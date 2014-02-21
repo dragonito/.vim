@@ -1,0 +1,24 @@
+<?php
+
+`PhpNamespaceStatement()`
+
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+
+/**
+ *
+ * @author David Badura <d.a.badura@gmail.com>
+ */
+class `Filename('', 'FooBarListener')`
+{
+
+    public function preUpdate(LifecycleEventArgs $args)
+    {
+        $entity = $args->getObject();
+        $entityManager = $args->getObjectManager();
+
+        // perhaps you only want to act on some "Product" entity
+        if ($entity instanceof Product) {
+            // do something with the Product
+        }
+    }
+}
