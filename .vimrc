@@ -29,7 +29,7 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'junegunn/vim-easy-align'
-Bundle 'Raimondi/delimitMate.vim'
+Bundle 'Raimondi/delimitMate'
 " Bundle 'gregsexton/MatchTag'
 Bundle 'pangloss/vim-javascript'
 
