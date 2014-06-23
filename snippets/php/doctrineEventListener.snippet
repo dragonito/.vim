@@ -6,15 +6,18 @@ use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 
 /**
  *
- * @author David Badura <d.a.badura@gmail.com>
+ * @author `g:snips_author`
  */
 class `Filename('', 'FooBarListener')`
 {
-
+	/**
+	 *
+	 * @param LivecycleEventArgs $args
+	 */
     public function preUpdate(LifecycleEventArgs $args)
     {
-        $entity = $args->getObject();
-        $entityManager = $args->getObjectManager();
+		$entity		   = $args->getObject();
+		$entityManager = $args->getObjectManager();
 
         // perhaps you only want to act on some "Product" entity
         if ($entity instanceof Product) {

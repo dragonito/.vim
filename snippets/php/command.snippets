@@ -15,7 +15,6 @@ snippet command
 	 */
 	class `Filename('', 'FooBar')` extends Command
 	{
-
 		/**
 		 *
 		 */
@@ -36,9 +35,8 @@ snippet command
 		{
 			${3}
 		}
-
 	}
 snippet command_argument
-	->addArgument('${1:name}', ${2:InputArgument::OPTIONAL}, '${3:description?}')
+	->addArgument('${1:name}', ${2:InputArgument::OPTIONAL}, '${3:description}')
 snippet command_option
-	->addOption('${1:name}', '${2:short}'', ${3:InputOption::VALUE_NONE}, '${4:description}')
+	->addOption('${1:name}', '${2:short}', ${3:InputOption::VALUE_NONE}, '${4:description}')

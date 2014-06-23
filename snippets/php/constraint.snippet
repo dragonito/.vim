@@ -10,14 +10,21 @@ use Symfony\Component\Validator\Constraint;
  *
  * @Annotation
  */
-class `Filename('', 'FooBarType')` extends Constraint
+class `Filename('', 'FooBar')` extends Constraint
 {
 
+	/**
+	 *
+	 * @var string
+	 */
 	public $message = 'The string "%string%" is not valid';
 
+	/**
+	 *
+	 * @return string
+	 */
 	public function getTargets()
 	{
 		return self::CLASS_CONSTRAINT;
 	}
-
 }

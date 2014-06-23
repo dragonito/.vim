@@ -61,6 +61,7 @@ set t_Co=256
 syntax on
 set number " Zeilennummer
 colorscheme jellybeans
+let html_no_rendering = 1
 
 " Encoding
 set encoding=utf-8
@@ -201,3 +202,7 @@ inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
+
+if filereadable(expand("~/.my_vimrc"))
+    source ~/.my_vimrc
+endif

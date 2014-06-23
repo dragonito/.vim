@@ -8,11 +8,14 @@ use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 
 /**
  *
- * @author David Badura <d.a.badura@gmail.com>
+ * @author `g:snips_author`
  */
 class `Filename('', 'FooBarListener')` implements EventSubscriber
 {
-
+	/**
+	 *
+	 * @return array
+	 */
     public function getSubscribedEvents()
     {
         return array(
@@ -20,9 +23,13 @@ class `Filename('', 'FooBarListener')` implements EventSubscriber
         );
     }
 
+	/**
+	 *
+	 * @param LifecycleEventArgs $args
+	 */
     public function preUpdate(LifecycleEventArgs $args)
     {
-        $entity = $args->getObject();
+        $entity        = $args->getObject();
         $entityManager = $args->getObjectManager();
 
         // perhaps you only want to act on some "Product" entity
