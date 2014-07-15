@@ -62,6 +62,7 @@ syntax on
 set number " Zeilennummer
 colorscheme jellybeans
 let html_no_rendering = 1
+set t_ut=
 
 " Encoding
 set encoding=utf-8
