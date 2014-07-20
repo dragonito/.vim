@@ -60,7 +60,6 @@ let g:snips_author='David Badura <d.a.badura@gmail.com>'
 set t_Co=256
 syntax on
 set number " Zeilennummer
-colorscheme jellybeans
 let html_no_rendering = 1
 set t_ut=
 
