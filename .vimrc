@@ -66,7 +66,7 @@ source ~/.vim/scripts/PhpNamespace.vim
 source ~/.vim/scripts/Symfony2.vim
 
 " Snippets
-let g:snips_author='David Badura <d.a.badura@gmail.com>'
+let g:snips_author = config['author_name'] . ' <' . config['author_email'] . '>'
 
 " Anzeige
 set t_Co=256
@@ -221,7 +221,3 @@ inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
-
-if filereadable(expand("~/.my_vimrc"))
-    source ~/.my_vimrc
-endif

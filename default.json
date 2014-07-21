@@ -1,4 +1,7 @@
 {
+    "author_name": "Max Mustermann",
+    "author_email": "mustermann@example.com",
+
     "encoding": "utf-8",
     "color_scheme": "jellybeans",
     "tab_size": 4,
