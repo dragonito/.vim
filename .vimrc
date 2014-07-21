@@ -8,6 +8,18 @@ call vundle#rc()
 
 " Bundles
 Plugin 'gmarik/vundle'
+Plugin 'mattn/webapi-vim'
+
+let config = webapi#json#decode(system('cat ~/.vim/default.json'))
+
+if filereadable(expand("~/.vim/config.json"))
+    call extend(config, webapi#json#decode(system('cat ~/.vim/config.json')))
+endif
+
+if filereadable(expand("project.json"))
+    call extend(config, webapi#json#decode(system('project.json')))
+endif
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
@@ -60,7 +72,9 @@ let g:snips_author='David Badura <d.a.badura@gmail.com>'
 set t_Co=256
 syntax on
 set number " Zeilennummer
-colorscheme jellybeans
+
+exec "colorscheme " . config['colorscheme']
+
 let html_no_rendering = 1
 set t_ut=
 
