@@ -17,7 +17,7 @@ if filereadable(expand("~/.vim/config.json"))
 endif
 
 if filereadable(expand("project.json"))
-    call extend(config, webapi#json#decode(system('project.json')))
+    call extend(config, webapi#json#decode(system('cat project.json')))
 endif
 
 Plugin 'scrooloose/nerdtree'
