@@ -73,18 +73,20 @@ set t_Co=256
 syntax on
 set number " Zeilennummer
 
-exec "colorscheme " . config['colorscheme']
+exec "colorscheme " . config['color_scheme']
 
 let html_no_rendering = 1
 set t_ut=
 
 " Encoding
-set encoding=utf-8
+exec "set encoding=" . config['encoding']
 
 " Format
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+let tabsize = config['tab_size']
+exec "set tabstop=" . tabsize
+exec "set shiftwidth=" . tabsize
+exec "set softtabstop=" . tabsize
+
 set expandtab
 set modeline
 set ls=2
@@ -180,16 +182,18 @@ let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args="--standard=PSR2 --report=csv --warning-severity=6"
 
 " remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+if config['trim_trailing_white_space_on_save']
+    autocmd BufWritePre * :%s/\s\+$//e
+endif
 
 " Nerdtree
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['^\.git$', '^\.svn$', '\.swp$']
+let NERDTreeIgnore = config['nerdtree']['ignore']
 let g:NERDTreeDirArrows=0
 
 " Shortcuts
-let mapleader = ","
-let maplocalleader = ","
+let mapleader = config['leader']
+let maplocalleader = config['leader']
 
 let g:user_emmet_expandabbr_key = '<c-h>'
 

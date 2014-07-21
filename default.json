@@ -1,3 +1,12 @@
 {
-    "colorscheme": "jellybeans"
+    "encoding": "utf-8",
+    "color_scheme": "jellybeans",
+    "tab_size": 4,
+    "trim_trailing_white_space_on_save": true,
+
+    "leader": ",",
+
+    "nerdtree": {
+        "ignore": ["^\\.git$", "^\\.svn$", "\\.swp$"]
+    }
 }
