@@ -28,11 +28,10 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'mhinz/vim-signify'
-Plugin 'evidens/vim-twig'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'evidens/vim-twig'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'scrooloose/syntastic'
 " Plugin 'tsaleh/vim-matchit'
@@ -44,6 +43,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'Raimondi/delimitMate'
 " Plugin 'gregsexton/MatchTag'
 Plugin 'pangloss/vim-javascript'
+Plugin 'chrisbra/csv.vim'
 
 " Snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -51,12 +51,16 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 
+if config['experimental']
 " Experiment
 " Plugin 'arnaud-lb/vim-php-namespace'
 " Plugin 'docteurklein/vim-symfony'
 " Plugin 'shawncplus/phpcomplete.vim'
 " Plugin 'scrooloose/nerdcommenter'
-Plugin 'chrisbra/csv.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'vim-scripts/vim-colorscheme-switcher'
+
+endif
 
 
 filetype plugin indent on     " required!

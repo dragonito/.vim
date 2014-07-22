@@ -11,5 +11,7 @@
 
     "nerdtree": {
         "ignore": ["^\\.git$", "^\\.svn$", "\\.swp$"]
-    }
+    },
+
+    "experimental": false
 }
