@@ -51,14 +51,18 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 
-if config['experimental']
+
 " Experiment
-" Plugin 'arnaud-lb/vim-php-namespace'
-" Plugin 'docteurklein/vim-symfony'
-" Plugin 'shawncplus/phpcomplete.vim'
-" Plugin 'scrooloose/nerdcommenter'
-Plugin 'xolox/vim-misc'
-Plugin 'vim-scripts/vim-colorscheme-switcher'
+if config['experimental']
+
+    " php namespace autocomplete
+    Plugin 'arnaud-lb/vim-php-namespace'
+    Plugin 'shawncplus/phpcomplete.vim'
+
+    " Plugin 'docteurklein/vim-symfony'
+    " Plugin 'scrooloose/nerdcommenter'
+    Plugin 'xolox/vim-misc'
+    Plugin 'vim-scripts/vim-colorscheme-switcher'
 
 endif
 
@@ -220,8 +224,22 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
 
-" php-namespace
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
+" Experiment
+if config['experimental']
+
+    " ctags
+    function! ReindexVendor()
+        exec "!ctags -R --verbose --PHP-kinds=+cf -f tags.vendors vendor"
+    endfunction
+
+    noremap <Leader>rv :call ReindexVendor()<CR>
+
+
+
+    " php namespace autocomplete
+    noremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+    noremap <Leader>u :call PhpInsertUse()<CR>
+    inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+    noremap <Leader>e :call PhpExpandClass()<CR>
+
+endif
